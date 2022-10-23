@@ -58,7 +58,8 @@ def standardizeGeography(value, aggregationType):
 	output: value (string)
 	"""
 	dictGeoIDLength = {'County':5, 'State':2, 'ZipCode':5,"CensusTract":11}
-	if len(str(value)) <= dictGeoIDLength[aggregationType]:
+	value = str(value)
+	if len(value) <= dictGeoIDLength[aggregationType]:
 		value = value.zfill(dictGeoIDLength[aggregationType])
 	else:
 		value = value[:dictGeoIDLength[aggregationType]]
