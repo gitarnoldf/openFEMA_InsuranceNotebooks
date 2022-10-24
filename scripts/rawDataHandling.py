@@ -39,7 +39,6 @@ def metadataHelper(filetype):
 		Metadata["PythonDataType"] = Metadata["Type"].map({"string": "str","boolean":"str","number": "str", "date": "str"})
 		Metadata = Metadata.reset_index(drop=True)
 		for index,row in Metadata.iterrows():
-			print(type(index), type(row))
 			# Convert only financial columns to float 
 			if row["Name"] in listNonNominalNumberPoliciesColumns:
 				Metadata.at[index, "PythonDataType"] = "float"

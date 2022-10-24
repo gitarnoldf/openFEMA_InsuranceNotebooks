@@ -1,4 +1,5 @@
 # Data Sources with large files
 FimaNfipClaims.csv  
 FimaNfipPolicies.csv
-
+FimaNfipPolicies_subset.csv
+*.pyc
